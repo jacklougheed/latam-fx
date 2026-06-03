@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "rates": "Cotizaciones",
+    "bolivianBlue": "Dólar Bolivia",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "common": {
+    "perDollar": "por US$1",
+    "viewDetails": "Ver detalles",
+    "buy": "Compra",
+    "sell": "Venta",
+    "mid": "Promedio",
+    "spread": "Brecha",
+    "blue": "Blue",
+    "d7": "7d",
+    "d30": "30d",
+    "history": "Tendencia reciente",
+    "updated": "Actualizado",
+    "source": "Fuente",
+    "inflation": "Inflación",
+    "yoy": "interanual",
+    "policyRate": "Tasa de política",
+    "asOf": "al",
+    "indicative": "indicativo",
+    "purchasingPower": "USD vs. moneda local (30d)",
+    "purchasingPowerNote": "Cuánto más (o menos) de moneda local compra un dólar frente a hace 30 días: una lectura rápida de cuánto rinde tu dólar.",
+    "aboutThisRate": "Sobre esta cotización",
+    "home": "Inicio",
+    "disclaimerShort": "Cotización indicativa, solo informativa — no es asesoramiento financiero.",
+    "notEnoughHistory": "Generando historial — vuelve pronto."
+  },
+  "home": {
+    "metaTitle": "LatamFX — Cotizaciones del dólar en vivo para América Latina",
+    "metaDescription": "Cotizaciones en vivo del dólar estadounidense para Colombia, Argentina, Brasil y el dólar blue de Bolivia. Números grandes y claros, actualizados automáticamente.",
+    "heroTitle": "Cotizaciones del dólar en vivo para América Latina",
+    "heroSubtitle": "Tipos de cambio del dólar claros y actualizados para Colombia, Argentina, Brasil y el dólar blue de Bolivia, actualizados automáticamente.",
+    "viewRates": "Ver cotizaciones",
+    "refreshNote": "Las cotizaciones se actualizan automáticamente cada 30 minutos aprox. El dólar blue de Bolivia se obtiene en vivo de Binance P2P."
+  },
+  "currencies": {
+    "COP": "Peso colombiano",
+    "ARS": "Peso argentino",
+    "BRL": "Real brasileño",
+    "BOB": "Boliviano"
+  },
+  "countries": {
+    "COP": "Colombia",
+    "ARS": "Argentina",
+    "BRL": "Brasil",
+    "BOB": "Bolivia"
+  },
+  "pages": {
+    "COP": {
+      "metaTitle": "Dólar a peso colombiano — Cotización en vivo (USD/COP)",
+      "metaDescription": "Cotización en vivo del dólar estadounidense a peso colombiano (USD/COP), actualizada automáticamente. Variación a 7 y 30 días e inflación de Colombia.",
+      "h1": "Dólar estadounidense a peso colombiano",
+      "intro": "Sigue en vivo la cotización del dólar estadounidense a peso colombiano (USD/COP). El número de abajo muestra cuántos pesos colombianos compra un dólar ahora mismo, con actualización automática durante el día.",
+      "about": "El peso colombiano flota libremente, por lo que el USD/COP se mueve con los mercados globales, el precio del petróleo y los flujos de capital. Mostramos el tipo medio de mercado a partir de datos públicos; los bancos y casas de cambio aplican sus propios márgenes, así que la cotización que recibas puede variar."
+    },
+    "ARS": {
+      "metaTitle": "Dólar a peso argentino — Dólar blue hoy (USD/ARS)",
+      "metaDescription": "Cotización en vivo del dólar blue: el tipo de cambio paralelo del dólar a peso argentino que la gente realmente usa. Variación a 7 y 30 días e inflación.",
+      "h1": "Dólar estadounidense a peso argentino (blue)",
+      "intro": "Sigue el 'dólar blue' de Argentina, el tipo de cambio paralelo más usado para el dólar. El número principal es el promedio de la compra y la venta del blue, actualizado durante el día.",
+      "about": "Por el cepo cambiario, el dólar blue refleja lo que los argentinos pagan realmente en la calle y suele diferir mucho del tipo oficial. Con inflación alta, el peso puede perder valor rápido, por lo que la cotización se mueve con frecuencia."
+    },
+    "BRL": {
+      "metaTitle": "Dólar a real brasileño — Cotización en vivo (USD/BRL)",
+      "metaDescription": "Cotización en vivo del dólar estadounidense a real brasileño (USD/BRL), actualizada automáticamente. Variación a 7 y 30 días e inflación de Brasil.",
+      "h1": "Dólar estadounidense a real brasileño",
+      "intro": "Sigue en vivo la cotización del dólar estadounidense a real brasileño (USD/BRL). El número de abajo muestra cuántos reales compra un dólar ahora mismo, con actualización automática durante el día.",
+      "about": "El real flota libremente y reacciona a los precios de las materias primas, las decisiones del Banco Central de Brasil y el apetito de riesgo global. Mostramos el tipo medio de mercado a partir de datos públicos; tu banco o bróker puede cotizar un precio distinto."
+    },
+    "BOB": {
+      "metaTitle": "Dólar blue Bolivia hoy — Cotización en vivo de Binance (USDT/BOB)",
+      "metaDescription": "Cotización en vivo del dólar blue en Bolivia, obtenida de Binance P2P. Compra y venta actuales (USDT a bolivianos) y tendencia reciente: la cotización que los bolivianos realmente usan.",
+      "h1": "Dólar blue de Bolivia",
+      "intro": "Sigue el 'dólar blue' de Bolivia, el tipo de cambio paralelo del dólar, obtenido en vivo de Binance P2P (USDT a bolivianos). Con dólares escasos al tipo oficial, esta es la cotización que muchos bolivianos realmente usan.",
+      "about": "El tipo oficial de Bolivia está fijado cerca de 6,96 Bs por dólar, pero es difícil conseguir dólares a ese precio. El tipo paralelo ('blue') de las operaciones entre personas con USDT en Binance refleja la demanda real en la calle y suele ubicarse muy por encima del oficial. Compra y venta muestran la mejor oferta y demanda en Binance P2P."
+    }
+  },
+  "about": {
+    "metaTitle": "Acerca de LatamFX",
+    "metaDescription": "Qué es LatamFX y por qué existe: tipos de cambio del dólar rápidos y claros para América Latina, incluidas las cotizaciones paralelas y blue.",
+    "h1": "Acerca de LatamFX",
+    "body": [
+      "LatamFX es una forma simple y rápida de ver cuánto vale realmente el dólar en América Latina. Nos centramos en las cotizaciones que la gente realmente usa, incluidas las paralelas o 'blue', y las mostramos como números grandes y claros que se leen de un vistazo.",
+      "Nuestro objetivo es ser el marcador más rápido para las cotizaciones del dólar en Colombia, Argentina, Brasil y Bolivia. Las cotizaciones se actualizan automáticamente desde fuentes públicas, y el dólar blue de Bolivia se obtiene en vivo de Binance P2P. Sin ruido, sin registros: solo el número que viniste a buscar."
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contacto — LatamFX",
+    "metaDescription": "¿Preguntas o comentarios sobre LatamFX? Escríbenos por correo.",
+    "h1": "Contacto",
+    "intro": "¿Tienes una pregunta, encontraste un problema con una cotización o necesitas ayuda? Nos encantaría saber de ti.",
+    "emailLabel": "Escríbenos a"
+  },
+  "terms": {
+    "metaTitle": "Términos del servicio",
+    "metaDescription": "Los términos que rigen el uso de LatamFX.",
+    "h1": "Términos del servicio",
+    "sections": [
+      {
+        "title": "Uso del sitio",
+        "body": "LatamFX ofrece información de tipos de cambio con fines informativos generales. Al usar el sitio aceptas estos términos. Si no estás de acuerdo, por favor no uses el sitio."
+      },
+      {
+        "title": "No es asesoramiento financiero",
+        "body": "Todas las cotizaciones son indicativas y se agregan desde fuentes públicas de terceros. Pueden estar demoradas o ser inexactas y diferir de las cotizaciones de bancos, casas de cambio o exchanges. Nada en este sitio es asesoramiento financiero, de inversión o de trading. Verifica siempre con un proveedor autorizado antes de operar."
+      },
+      {
+        "title": "Sin garantías ni responsabilidad",
+        "body": "El sitio se ofrece \"tal cual\", sin garantías de ningún tipo. En la máxima medida permitida por la ley, LatamFX no se responsabiliza por pérdidas o daños derivados del uso o la confianza en la información proporcionada."
+      },
+      {
+        "title": "Cambios",
+        "body": "Podemos actualizar estos términos, las fuentes de datos o el sitio en cualquier momento. El uso continuado tras los cambios implica su aceptación."
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Política de privacidad",
+    "metaDescription": "Cómo LatamFX maneja los datos y la privacidad.",
+    "h1": "Política de privacidad",
+    "sections": [
+      {
+        "title": "Qué recopilamos",
+        "body": "LatamFX no requiere una cuenta ni te solicita información personal. No vendemos datos personales."
+      },
+      {
+        "title": "Registros y analítica",
+        "body": "Nuestro servidor puede conservar registros técnicos estándar (como la dirección IP y el tipo de navegador) por seguridad y rendimiento. Si se habilita una analítica respetuosa con la privacidad, se usa solo para entender el tráfico agregado."
+      },
+      {
+        "title": "Publicidad",
+        "body": "Podemos mostrar anuncios. Los proveedores de publicidad o analítica de terceros, si se habilitan, pueden usar cookies o tecnologías similares según sus propias políticas de privacidad."
+      },
+      {
+        "title": "Contacto",
+        "body": "¿Preguntas sobre privacidad? Escribe a info@latamfx.com."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Cotizaciones del dólar en vivo para América Latina.",
+    "rates": "Cotizaciones",
+    "site": "Sitio",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "disclaimer": "LatamFX ofrece cotizaciones indicativas solo con fines informativos y no constituye asesoramiento financiero. Las cotizaciones se agregan desde fuentes públicas de terceros y pueden diferir de las de bancos, casas de cambio o exchanges.",
+    "rights": "Todos los derechos reservados."
+  }
+}

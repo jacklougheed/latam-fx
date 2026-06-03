@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "rates": "Rates",
+    "bolivianBlue": "Bolivian Blue",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "common": {
+    "perDollar": "per US$1",
+    "viewDetails": "View details",
+    "buy": "Buy",
+    "sell": "Sell",
+    "mid": "Average",
+    "spread": "Spread",
+    "blue": "Blue",
+    "d7": "7d",
+    "d30": "30d",
+    "history": "Recent trend",
+    "updated": "Updated",
+    "source": "Source",
+    "inflation": "Inflation",
+    "yoy": "YoY",
+    "policyRate": "Policy rate",
+    "asOf": "as of",
+    "indicative": "indicative",
+    "purchasingPower": "USD vs local (30d)",
+    "purchasingPowerNote": "Change in how much local currency one US dollar buys versus 30 days ago — a quick read on how far your dollar goes.",
+    "aboutThisRate": "About this rate",
+    "home": "Home",
+    "disclaimerShort": "Indicative rate for information only — not financial advice.",
+    "notEnoughHistory": "Building history — check back soon."
+  },
+  "home": {
+    "metaTitle": "LatamFX — Live USD Exchange Rates for Latin America",
+    "metaDescription": "Live US dollar exchange rates for Colombia, Argentina, Brazil and the Bolivian blue dollar. Big, clear numbers, refreshed automatically.",
+    "heroTitle": "Live USD exchange rates for Latin America",
+    "heroSubtitle": "Clear, up-to-date dollar rates for Colombia, Argentina, Brazil and the Bolivian blue dollar — refreshed automatically.",
+    "viewRates": "View rates",
+    "refreshNote": "Rates refresh automatically about every 30 minutes. The Bolivian blue rate is sourced live from Binance P2P."
+  },
+  "currencies": {
+    "COP": "Colombian Peso",
+    "ARS": "Argentine Peso",
+    "BRL": "Brazilian Real",
+    "BOB": "Boliviano"
+  },
+  "countries": {
+    "COP": "Colombia",
+    "ARS": "Argentina",
+    "BRL": "Brazil",
+    "BOB": "Bolivia"
+  },
+  "pages": {
+    "COP": {
+      "metaTitle": "USD to Colombian Peso — Live Exchange Rate (USD/COP)",
+      "metaDescription": "Live US dollar to Colombian peso exchange rate (USD/COP), updated automatically. 7-day and 30-day trends plus Colombia inflation.",
+      "h1": "US Dollar to Colombian Peso",
+      "intro": "Track the live US dollar to Colombian peso exchange rate (USD/COP). The number below shows how many Colombian pesos one US dollar buys right now, refreshed automatically throughout the day.",
+      "about": "Colombia's peso floats freely, so USD/COP moves with global markets, oil prices and capital flows. We show the mid-market rate aggregated from public FX data; banks and casas de cambio apply their own spreads, so the rate you get may differ."
+    },
+    "ARS": {
+      "metaTitle": "USD to Argentine Peso — Blue Dollar Rate Today (USD/ARS)",
+      "metaDescription": "Live Argentine blue dollar rate — the parallel US dollar to Argentine peso exchange rate people actually use. 7-day and 30-day trends plus inflation.",
+      "h1": "US Dollar to Argentine Peso (Blue)",
+      "intro": "Track Argentina's 'blue dollar' — the widely used parallel exchange rate for US dollars. The headline number is the average of the blue buy and sell quotes, refreshed throughout the day.",
+      "about": "Because of currency controls, the blue-dollar rate reflects what Argentines actually pay on the street and usually differs sharply from the official rate. With high inflation, the peso can lose value quickly, so the rate can move fast."
+    },
+    "BRL": {
+      "metaTitle": "USD to Brazilian Real — Live Exchange Rate (USD/BRL)",
+      "metaDescription": "Live US dollar to Brazilian real exchange rate (USD/BRL), updated automatically. 7-day and 30-day trends plus Brazil inflation.",
+      "h1": "US Dollar to Brazilian Real",
+      "intro": "Track the live US dollar to Brazilian real exchange rate (USD/BRL). The number below shows how many reais one US dollar buys right now, refreshed automatically throughout the day.",
+      "about": "The real floats freely and reacts to commodity prices, decisions by the Banco Central do Brasil and global risk sentiment. We show the mid-market rate from public FX data; your bank or broker may quote a different price."
+    },
+    "BOB": {
+      "metaTitle": "Bolivian Blue Dollar Today — Live Rate from Binance (USDT/BOB)",
+      "metaDescription": "Live Bolivian blue dollar rate, sourced from Binance P2P. Current buy and sell (USDT to bolivianos) with recent trend — the rate Bolivians really use.",
+      "h1": "Bolivian Blue Dollar",
+      "intro": "Track the Bolivian 'blue dollar' — the parallel US dollar rate in Bolivia, sourced live from Binance P2P (USDT to bolivianos). With dollars scarce at the official rate, this is the rate many Bolivians actually use.",
+      "about": "Bolivia's official rate is pegged near 6.96 Bs per dollar, but dollars are hard to get at that price. The parallel ('blue') rate from peer-to-peer USDT trades on Binance reflects real street demand and typically sits well above the official peg. Buy and sell show the best bid and ask on Binance P2P."
+    }
+  },
+  "about": {
+    "metaTitle": "About LatamFX",
+    "metaDescription": "What LatamFX is and why it exists: fast, clear US dollar exchange rates for Latin America, including parallel and blue-dollar rates.",
+    "h1": "About LatamFX",
+    "body": [
+      "LatamFX is a simple, fast way to check what the US dollar is really worth across Latin America. We focus on the rates people actually use — including parallel or 'blue' rates — and present them as big, clear numbers you can read at a glance.",
+      "Our goal is to be the quickest bookmark for dollar rates in Colombia, Argentina, Brazil and Bolivia. Rates refresh automatically from public sources, with the Bolivian blue rate sourced live from Binance P2P. No clutter, no sign-ups — just the number you came for."
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contact LatamFX",
+    "metaDescription": "Questions or feedback about LatamFX? Get in touch by email.",
+    "h1": "Contact",
+    "intro": "Have a question, found a problem with a rate, or need help? We'd love to hear from you.",
+    "emailLabel": "Email us at"
+  },
+  "terms": {
+    "metaTitle": "Terms of Service",
+    "metaDescription": "The terms governing your use of LatamFX.",
+    "h1": "Terms of Service",
+    "sections": [
+      {
+        "title": "Use of the site",
+        "body": "LatamFX provides exchange-rate information for general informational purposes. By using the site you agree to these terms. If you do not agree, please do not use the site."
+      },
+      {
+        "title": "No financial advice",
+        "body": "All rates are indicative and aggregated from third-party public sources. They may be delayed or inaccurate and may differ from rates offered by banks, exchanges or money changers. Nothing on this site is financial, investment or trading advice. Always verify with a licensed provider before transacting."
+      },
+      {
+        "title": "No warranty and liability",
+        "body": "The site is provided \"as is\" without warranties of any kind. To the fullest extent permitted by law, LatamFX is not liable for any loss or damage arising from use of, or reliance on, the information provided."
+      },
+      {
+        "title": "Changes",
+        "body": "We may update these terms, the data sources or the site at any time. Continued use after changes means you accept them."
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "How LatamFX handles data and privacy.",
+    "h1": "Privacy Policy",
+    "sections": [
+      {
+        "title": "What we collect",
+        "body": "LatamFX does not require an account and does not ask you for personal information. We do not sell personal data."
+      },
+      {
+        "title": "Logs and analytics",
+        "body": "Our server may keep standard technical logs (such as IP address and browser type) for security and performance. If privacy-friendly analytics are enabled, they are used only to understand aggregate traffic."
+      },
+      {
+        "title": "Advertising",
+        "body": "We may display ads. Third-party ad or analytics providers, if enabled, may use cookies or similar technologies subject to their own privacy policies."
+      },
+      {
+        "title": "Contact",
+        "body": "Questions about privacy? Email info@latamfx.com."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Live USD exchange rates for Latin America.",
+    "rates": "Rates",
+    "site": "Site",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "disclaimer": "LatamFX provides indicative exchange rates for informational purposes only and does not constitute financial advice. Rates are aggregated from third-party public sources and may differ from those offered by banks, exchanges or money changers.",
+    "rights": "All rights reserved."
+  }
+}

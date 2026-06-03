@@ -1,0 +1,28 @@
+# Reverse proxy for LatamFX. Copy to /etc/nginx/sites-available/latamfx,
+# symlink into sites-enabled, test with `sudo nginx -t`, then reload.
+# After this is live on port 80, add HTTPS with:
+#   sudo certbot --nginx -d latamfx.com -d www.latamfx.com
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name latamfx.com www.latamfx.com;
+
+    # Optional: serve Next static assets with long cache.
+    location /_next/static/ {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_cache_valid 200 60m;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "latamfx",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LatamFX — live USD exchange rates for Latin America (Colombia, Argentina, Brazil, Bolivian blue).",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "refresh": "node -e \"fetch('http://localhost:'+(process.env.PORT||3000)+'/api/refresh',{method:'POST',headers:{'x-refresh-secret':process.env.REFRESH_SECRET||''}}).then(r=>r.text()).then(t=>console.log(t)).catch(e=>{console.error(e);process.exit(1)})\""
+  },
+  "dependencies": {
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.39",
+    "tailwindcss": "3.4.6",
+    "typescript": "5.5.3"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

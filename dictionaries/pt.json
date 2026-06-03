@@ -1,0 +1,154 @@
+{
+  "nav": {
+    "rates": "Cotações",
+    "bolivianBlue": "Dólar Bolívia",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "common": {
+    "perDollar": "por US$1",
+    "viewDetails": "Ver detalhes",
+    "buy": "Compra",
+    "sell": "Venda",
+    "mid": "Média",
+    "spread": "Spread",
+    "blue": "Blue",
+    "d7": "7d",
+    "d30": "30d",
+    "history": "Tendência recente",
+    "updated": "Atualizado",
+    "source": "Fonte",
+    "inflation": "Inflação",
+    "yoy": "anual",
+    "policyRate": "Taxa básica",
+    "asOf": "em",
+    "indicative": "indicativo",
+    "purchasingPower": "USD vs. moeda local (30d)",
+    "purchasingPowerNote": "Quanto a mais (ou a menos) de moeda local um dólar compra em relação a 30 dias atrás — uma leitura rápida de quanto seu dólar rende.",
+    "aboutThisRate": "Sobre esta cotação",
+    "home": "Início",
+    "disclaimerShort": "Cotação indicativa, apenas informativa — não é aconselhamento financeiro.",
+    "notEnoughHistory": "Construindo histórico — volte em breve."
+  },
+  "home": {
+    "metaTitle": "LatamFX — Cotações do dólar ao vivo para a América Latina",
+    "metaDescription": "Cotações do dólar ao vivo para Colômbia, Argentina, Brasil e o dólar blue da Bolívia. Números grandes e claros, atualizados automaticamente.",
+    "heroTitle": "Cotações do dólar ao vivo para a América Latina",
+    "heroSubtitle": "Cotações do dólar claras e atualizadas para Colômbia, Argentina, Brasil e o dólar blue da Bolívia, atualizadas automaticamente.",
+    "viewRates": "Ver cotações",
+    "refreshNote": "As cotações são atualizadas automaticamente a cada 30 minutos aprox. O dólar blue da Bolívia é obtido ao vivo da Binance P2P."
+  },
+  "currencies": {
+    "COP": "Peso colombiano",
+    "ARS": "Peso argentino",
+    "BRL": "Real brasileiro",
+    "BOB": "Boliviano"
+  },
+  "countries": {
+    "COP": "Colômbia",
+    "ARS": "Argentina",
+    "BRL": "Brasil",
+    "BOB": "Bolívia"
+  },
+  "pages": {
+    "COP": {
+      "metaTitle": "Dólar para peso colombiano — Cotação ao vivo (USD/COP)",
+      "metaDescription": "Cotação ao vivo do dólar americano para peso colombiano (USD/COP), atualizada automaticamente. Variação de 7 e 30 dias e inflação da Colômbia.",
+      "h1": "Dólar americano para peso colombiano",
+      "intro": "Acompanhe ao vivo a cotação do dólar americano para peso colombiano (USD/COP). O número abaixo mostra quantos pesos colombianos um dólar compra agora, com atualização automática ao longo do dia.",
+      "about": "O peso colombiano flutua livremente, então o USD/COP se move com os mercados globais, o preço do petróleo e os fluxos de capital. Mostramos a taxa média de mercado a partir de dados públicos; bancos e casas de câmbio aplicam suas próprias margens, então a cotação que você recebe pode variar."
+    },
+    "ARS": {
+      "metaTitle": "Dólar para peso argentino — Dólar blue hoje (USD/ARS)",
+      "metaDescription": "Cotação ao vivo do dólar blue: a taxa paralela do dólar para peso argentino que as pessoas realmente usam. Variação de 7 e 30 dias e inflação.",
+      "h1": "Dólar americano para peso argentino (blue)",
+      "intro": "Acompanhe o 'dólar blue' da Argentina, a taxa de câmbio paralela mais usada para o dólar. O número principal é a média da compra e da venda do blue, atualizado ao longo do dia.",
+      "about": "Por causa do controle cambial, o dólar blue reflete o que os argentinos realmente pagam na rua e costuma diferir bastante da taxa oficial. Com inflação alta, o peso pode perder valor rapidamente, então a cotação se move com frequência."
+    },
+    "BRL": {
+      "metaTitle": "Dólar para real — Cotação ao vivo (USD/BRL)",
+      "metaDescription": "Cotação ao vivo do dólar americano para real brasileiro (USD/BRL), atualizada automaticamente. Variação de 7 e 30 dias e inflação do Brasil.",
+      "h1": "Dólar americano para real brasileiro",
+      "intro": "Acompanhe ao vivo a cotação do dólar americano para real brasileiro (USD/BRL). O número abaixo mostra quantos reais um dólar compra agora, com atualização automática ao longo do dia.",
+      "about": "O real flutua livremente e reage aos preços das commodities, às decisões do Banco Central do Brasil e ao apetite por risco global. Mostramos a taxa média de mercado a partir de dados públicos; seu banco ou corretora pode cotar um preço diferente."
+    },
+    "BOB": {
+      "metaTitle": "Dólar blue Bolívia hoje — Cotação ao vivo da Binance (USDT/BOB)",
+      "metaDescription": "Cotação ao vivo do dólar blue na Bolívia, obtida da Binance P2P. Compra e venda atuais (USDT para bolivianos) e tendência recente: a cotação que os bolivianos realmente usam.",
+      "h1": "Dólar blue da Bolívia",
+      "intro": "Acompanhe o 'dólar blue' da Bolívia, a taxa paralela do dólar, obtida ao vivo da Binance P2P (USDT para bolivianos). Com dólares escassos à taxa oficial, esta é a cotação que muitos bolivianos realmente usam.",
+      "about": "A taxa oficial da Bolívia é fixada perto de 6,96 Bs por dólar, mas é difícil conseguir dólares a esse preço. A taxa paralela ('blue') das negociações entre pessoas com USDT na Binance reflete a demanda real na rua e costuma ficar bem acima da oficial. Compra e venda mostram a melhor oferta e procura na Binance P2P."
+    }
+  },
+  "about": {
+    "metaTitle": "Sobre o LatamFX",
+    "metaDescription": "O que é o LatamFX e por que existe: cotações do dólar rápidas e claras para a América Latina, incluindo as taxas paralelas e blue.",
+    "h1": "Sobre o LatamFX",
+    "body": [
+      "O LatamFX é um jeito simples e rápido de ver quanto o dólar realmente vale na América Latina. Focamos nas cotações que as pessoas realmente usam, incluindo as paralelas ou 'blue', e as mostramos como números grandes e claros, fáceis de ler de relance.",
+      "Nosso objetivo é ser o favorito mais rápido para cotações do dólar na Colômbia, Argentina, Brasil e Bolívia. As cotações são atualizadas automaticamente a partir de fontes públicas, e o dólar blue da Bolívia é obtido ao vivo da Binance P2P. Sem poluição, sem cadastros: só o número que você veio buscar."
+    ]
+  },
+  "contact": {
+    "metaTitle": "Contato — LatamFX",
+    "metaDescription": "Dúvidas ou comentários sobre o LatamFX? Fale com a gente por e-mail.",
+    "h1": "Contato",
+    "intro": "Tem uma dúvida, encontrou um problema em uma cotação ou precisa de ajuda? Vamos adorar ouvir você.",
+    "emailLabel": "Envie um e-mail para"
+  },
+  "terms": {
+    "metaTitle": "Termos de serviço",
+    "metaDescription": "Os termos que regem o uso do LatamFX.",
+    "h1": "Termos de serviço",
+    "sections": [
+      {
+        "title": "Uso do site",
+        "body": "O LatamFX fornece informações de câmbio para fins informativos gerais. Ao usar o site, você concorda com estes termos. Se não concordar, por favor não use o site."
+      },
+      {
+        "title": "Não é aconselhamento financeiro",
+        "body": "Todas as cotações são indicativas e agregadas de fontes públicas de terceiros. Elas podem estar atrasadas ou imprecisas e diferir das cotações de bancos, casas de câmbio ou exchanges. Nada neste site é aconselhamento financeiro, de investimento ou de trading. Verifique sempre com um provedor autorizado antes de operar."
+      },
+      {
+        "title": "Sem garantias e responsabilidade",
+        "body": "O site é fornecido \"como está\", sem garantias de qualquer tipo. Na máxima extensão permitida por lei, o LatamFX não se responsabiliza por perdas ou danos decorrentes do uso ou da confiança nas informações fornecidas."
+      },
+      {
+        "title": "Alterações",
+        "body": "Podemos atualizar estes termos, as fontes de dados ou o site a qualquer momento. O uso continuado após as alterações significa que você as aceita."
+      }
+    ]
+  },
+  "privacy": {
+    "metaTitle": "Política de privacidade",
+    "metaDescription": "Como o LatamFX trata dados e privacidade.",
+    "h1": "Política de privacidade",
+    "sections": [
+      {
+        "title": "O que coletamos",
+        "body": "O LatamFX não exige conta e não solicita informações pessoais. Não vendemos dados pessoais."
+      },
+      {
+        "title": "Registros e analytics",
+        "body": "Nosso servidor pode manter registros técnicos padrão (como endereço IP e tipo de navegador) por segurança e desempenho. Se um analytics que respeita a privacidade for ativado, ele é usado apenas para entender o tráfego agregado."
+      },
+      {
+        "title": "Publicidade",
+        "body": "Podemos exibir anúncios. Provedores terceiros de anúncios ou analytics, se ativados, podem usar cookies ou tecnologias semelhantes conforme suas próprias políticas de privacidade."
+      },
+      {
+        "title": "Contato",
+        "body": "Dúvidas sobre privacidade? Escreva para info@latamfx.com."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Cotações do dólar ao vivo para a América Latina.",
+    "rates": "Cotações",
+    "site": "Site",
+    "terms": "Termos",
+    "privacy": "Privacidade",
+    "disclaimer": "O LatamFX fornece cotações indicativas apenas para fins informativos e não constitui aconselhamento financeiro. As cotações são agregadas de fontes públicas de terceiros e podem diferir das oferecidas por bancos, casas de câmbio ou exchanges.",
+    "rights": "Todos os direitos reservados."
+  }
+}
