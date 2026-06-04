@@ -2,11 +2,7 @@ import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getDictionary } from "@/lib/i18n";
-import { LOCALES, isLocale } from "@/lib/locales";
-
-export function generateStaticParams() {
-  return LOCALES.map((locale) => ({ locale }));
-}
+import { isLocale } from "@/lib/locales";
 
 export default function LocaleLayout({
   children,

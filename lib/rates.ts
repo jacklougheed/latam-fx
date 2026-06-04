@@ -18,6 +18,7 @@ import {
 } from "./store";
 import { fetchBolivianBlue } from "./sources/binance";
 import { fetchAwesomeDaily, fetchAwesomeLast } from "./sources/awesome";
+import { fetchOpenExchangeRates } from "./sources/openExchangeRate";
 import {
   fetchArgentinaBlue,
   fetchArgentinaBlueHistory,
@@ -28,6 +29,11 @@ const SRC: Record<CurrencyCode, { label: string; url: string }> = {
   BRL: { label: "AwesomeAPI", url: "https://economia.awesomeapi.com.br" },
   ARS: { label: "Bluelytics / dólar blue", url: "https://bluelytics.com.ar" },
   BOB: { label: "Binance P2P", url: "https://p2p.binance.com" },
+};
+
+const FX_FALLBACK = {
+  label: "ExchangeRate-API",
+  url: "https://open.er-api.com",
 };
 
 interface CacheState {
@@ -73,10 +79,11 @@ async function doRefresh(): Promise<RatesData> {
   const store = await loadStore();
   const now = Date.now();
 
-  const [bob, awesomeLast, awesomeCop, awesomeBrl, arsCur, arsHist] =
+  const [bob, awesomeLast, openRates, awesomeCop, awesomeBrl, arsCur, arsHist] =
     await Promise.allSettled([
       fetchBolivianBlue(),
       fetchAwesomeLast(["USD-COP", "USD-BRL"]),
+      fetchOpenExchangeRates(["COP", "BRL"]),
       fetchAwesomeDaily("USD-COP", 40),
       fetchAwesomeDaily("USD-BRL", 40),
       fetchArgentinaBlue(),
@@ -87,38 +94,52 @@ async function doRefresh(): Promise<RatesData> {
   const pts = store.points as Record<CurrencyCode, RatePoint[]>;
 
   // Colombia + Brazil (current)
-  if (awesomeLast.status === "fulfilled") {
-    const m = awesomeLast.value;
-    if (m["USD-COP"]) {
-      cur.COP = {
-        perUsd: m["USD-COP"],
-        buy: null,
-        sell: null,
-        updatedAt: now,
-        source: SRC.COP.label,
-        sourceUrl: SRC.COP.url,
-        ok: true,
-      };
-      pts.COP = mergeDaily(pts.COP, [{ t: now, v: m["USD-COP"] }]);
-    }
-    if (m["USD-BRL"]) {
-      cur.BRL = {
-        perUsd: m["USD-BRL"],
-        buy: null,
-        sell: null,
-        updatedAt: now,
-        source: SRC.BRL.label,
-        sourceUrl: SRC.BRL.url,
-        ok: true,
-      };
-      pts.BRL = mergeDaily(pts.BRL, [{ t: now, v: m["USD-BRL"] }]);
+  const awesomeCurrent =
+    awesomeLast.status === "fulfilled" ? awesomeLast.value : {};
+  const fallbackCurrent =
+    openRates.status === "fulfilled" ? openRates.value : {};
+
+  const cop = awesomeCurrent["USD-COP"] ?? fallbackCurrent.COP;
+  const copSource = awesomeCurrent["USD-COP"] ? SRC.COP : FX_FALLBACK;
+  const brl = awesomeCurrent["USD-BRL"] ?? fallbackCurrent.BRL;
+  const brlSource = awesomeCurrent["USD-BRL"] ? SRC.BRL : FX_FALLBACK;
+
+  if (cop) {
+    cur.COP = {
+      perUsd: cop,
+      buy: null,
+      sell: null,
+      updatedAt: now,
+      source: copSource.label,
+      sourceUrl: copSource.url,
+      ok: true,
+    };
+    if (copSource === SRC.COP) {
+      pts.COP = mergeDaily(pts.COP, [{ t: now, v: cop }]);
     }
   }
+  if (brl) {
+    cur.BRL = {
+      perUsd: brl,
+      buy: null,
+      sell: null,
+      updatedAt: now,
+      source: brlSource.label,
+      sourceUrl: brlSource.url,
+      ok: true,
+    };
+    if (brlSource === SRC.BRL) {
+      pts.BRL = mergeDaily(pts.BRL, [{ t: now, v: brl }]);
+    }
+  }
+
   // Colombia + Brazil (history backfill)
   if (awesomeCop.status === "fulfilled" && awesomeCop.value.length)
     pts.COP = mergeDaily(pts.COP, awesomeCop.value);
+  else if (cop) pts.COP = appendIntraday(pts.COP, { t: now, v: cop });
   if (awesomeBrl.status === "fulfilled" && awesomeBrl.value.length)
     pts.BRL = mergeDaily(pts.BRL, awesomeBrl.value);
+  else if (brl) pts.BRL = appendIntraday(pts.BRL, { t: now, v: brl });
 
   // Argentina (current + history)
   if (arsCur.status === "fulfilled") {
@@ -193,9 +214,18 @@ export async function getRates(): Promise<RatesData> {
 export function startBackgroundRefresh(): void {
   if (state.started) return;
   state.started = true;
-  refresh().catch((e) =>
-    console.error("[refresh:init]", (e as Error)?.message ?? e),
-  );
+  refresh().catch((e) => {
+    console.error("[refresh:init]", (e as Error)?.message ?? e);
+    const retry = setTimeout(() => {
+      refresh().catch((retryError) =>
+        console.error(
+          "[refresh:init-retry]",
+          (retryError as Error)?.message ?? retryError,
+        ),
+      );
+    }, 15000);
+    (retry as { unref?: () => void }).unref?.();
+  });
   const timer = setInterval(
     () => {
       refresh().catch((e) =>
