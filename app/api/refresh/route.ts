@@ -5,7 +5,7 @@ import { REFRESH_SECRET } from "@/lib/config";
 export const dynamic = "force-dynamic";
 
 // Manually trigger a refresh. Useful as a cron backup:
-//   */30 * * * * curl -s -X POST -H "x-refresh-secret: $SECRET" https://latamfx.com/api/refresh
+//   */30 * * * * curl -s -X POST -H "x-refresh-secret: $SECRET" https://latam-fx.com/api/refresh
 async function handle(req: Request) {
   if (REFRESH_SECRET) {
     const provided =

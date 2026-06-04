@@ -2,12 +2,12 @@ import path from "path";
 
 export const SITE_NAME = "LatamFX";
 
-export const SITE_URL = (process.env.SITE_URL || "https://latamfx.com").replace(
+export const SITE_URL = (process.env.SITE_URL || "https://latam-fx.com").replace(
   /\/+$/,
   "",
 );
 
-export const CONTACT_EMAIL = "info@latamfx.com";
+export const CONTACT_EMAIL = "info@latam-fx.com";
 
 // Refresh cadence in minutes (minimum 5 to avoid hammering the public APIs).
 export const REFRESH_MINUTES = Math.max(

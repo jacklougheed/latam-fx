@@ -1,0 +1,31 @@
+# systemd unit for LatamFX. Copy to /etc/systemd/system/latam-fx.service,
+# adjust paths/user, then:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now latam-fx
+#
+# nvm users: systemd does not load nvm — set ExecStart to the absolute node path
+# from `which node`, e.g.
+#   ExecStart=/home/you/.nvm/versions/node/vXX/bin/node node_modules/next/dist/bin/next start -p 3000
+# NodeSource installs put node/npm at /usr/bin (the default below).
+
+[Unit]
+Description=LatamFX (Next.js)
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/latam-fx
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=SITE_URL=https://latam-fx.com
+Environment=DATA_DIR=/var/www/latam-fx/data
+Environment=REFRESH_INTERVAL_MINUTES=30
+# Environment=REFRESH_SECRET=change-me-to-a-long-random-string
+ExecStart=/usr/bin/npm run start
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

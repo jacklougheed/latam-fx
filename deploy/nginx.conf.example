@@ -1,12 +1,13 @@
-# Reverse proxy for LatamFX. Copy to /etc/nginx/sites-available/latamfx,
+# Optional — only if you use nginx instead of Apache (see apache.conf.example).
+# Reverse proxy for LatamFX. Copy to /etc/nginx/sites-available/latam-fx,
 # symlink into sites-enabled, test with `sudo nginx -t`, then reload.
 # After this is live on port 80, add HTTPS with:
-#   sudo certbot --nginx -d latamfx.com -d www.latamfx.com
+#   sudo certbot --nginx -d latam-fx.com -d www.latam-fx.com
 
 server {
     listen 80;
     listen [::]:80;
-    server_name latamfx.com www.latamfx.com;
+    server_name latam-fx.com www.latam-fx.com;
 
     # Optional: serve Next static assets with long cache.
     location /_next/static/ {

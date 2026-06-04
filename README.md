@@ -39,7 +39,7 @@ Then put nginx in front of it and add TLS — see [`deploy/`](./deploy).
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `SITE_URL` | `https://latamfx.com` | Canonical URLs, sitemap, hreflang. **Set this.** |
+| `SITE_URL` | `https://latam-fx.com` | Canonical URLs, sitemap, hreflang. **Set this**, then rebuild. |
 | `DATA_DIR` | `./data` | Where `history.json` is written. Use an absolute, writable path in prod. |
 | `REFRESH_INTERVAL_MINUTES` | `30` | How often rates refresh (min 5). |
 | `REFRESH_SECRET` | _(empty)_ | If set, protects `POST /api/refresh`. Recommended in prod. |
@@ -60,7 +60,7 @@ Then put nginx in front of it and add TLS — see [`deploy/`](./deploy).
 - **`GET /api/rates`** returns the current snapshot as JSON.
 - **`POST /api/refresh`** forces a refresh (optionally protected by `REFRESH_SECRET`). Use it as a cron backup if you ever run the app without the in-process refresher:
   ```
-  */30 * * * * curl -s -X POST -H "x-refresh-secret: YOUR_SECRET" https://latamfx.com/api/refresh
+  */30 * * * * curl -s -X POST -H "x-refresh-secret: YOUR_SECRET" https://latam-fx.com/api/refresh
   ```
 
 > ⚠️ **Run a single Node instance** (or rely on the cron above). If you run multiple clustered instances, each will refresh independently — harmless but wasteful.
@@ -116,21 +116,21 @@ To edit copy, edit the three JSON files — keep their structure identical (the 
 
 ## Deployment
 
-See [`deploy/latamfx.service`](./deploy/latamfx.service) (systemd) and [`deploy/nginx.conf.example`](./deploy/nginx.conf.example). Short version:
+See [`deploy/latam-fx.service`](./deploy/latam-fx.service) (systemd) and [`deploy/apache.conf.example`](./deploy/apache.conf.example) — or [`deploy/nginx.conf.example`](./deploy/nginx.conf.example) if you use nginx. Short version (Apache):
 
 ```bash
 # build
 npm install && npm run build
 
 # run under systemd
-sudo cp deploy/latamfx.service /etc/systemd/system/
-sudo systemctl daemon-reload && sudo systemctl enable --now latamfx
+sudo cp deploy/latam-fx.service /etc/systemd/system/
+sudo systemctl daemon-reload && sudo systemctl enable --now latam-fx
 
-# reverse proxy + TLS
-sudo cp deploy/nginx.conf.example /etc/nginx/sites-available/latamfx
-sudo ln -s /etc/nginx/sites-available/latamfx /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl reload nginx
-sudo certbot --nginx -d latamfx.com -d www.latamfx.com
+# reverse proxy (Apache) + TLS
+sudo a2enmod proxy proxy_http headers
+sudo cp deploy/apache.conf.example /etc/apache2/sites-available/latam-fx.conf
+sudo a2ensite latam-fx && sudo apache2ctl configtest && sudo systemctl reload apache2
+sudo certbot --apache -d latam-fx.com -d www.latam-fx.com
 ```
 
 Make sure `DATA_DIR` is writable by the service user.
@@ -139,7 +139,7 @@ Make sure `DATA_DIR` is writable by the service user.
 
 ## Notes & assumptions
 
-- Domain assumed **latamfx.com**, contact **info@latamfx.com** (change `SITE_URL` and `lib/config.ts`).
+- Domain **latam-fx.com**, contact **info@latam-fx.com**. Set `SITE_URL` in `.env` and rebuild so `sitemap.xml`/`robots.txt`/canonical tags use it.
 - Argentina & Bolivia use the **parallel / blue** rate on purpose (that's the "on the ground" rate). Colombia & Brazil float freely, so the market rate is shown.
 - **Terms & Privacy are reasonable templates, not legal advice** — have a professional review them, especially once you enable ads/analytics.
 - Footer copyright reads **© LatamFX 2026. All rights reserved.** (as requested).

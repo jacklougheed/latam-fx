@@ -1,0 +1,26 @@
+# Apache reverse proxy for LatamFX.
+# LatamFX is NOT static files — it runs as a Node process (see latam-fx.service)
+# and Apache forwards requests to it. This vhost lives alongside your other
+# sites' vhosts; it only matches the latam-fx.com hostname.
+#
+# 1) Enable the proxy modules (additive — safe for your other sites):
+#      sudo a2enmod proxy proxy_http headers
+# 2) Copy this to /etc/apache2/sites-available/latam-fx.conf
+#    (change the port below if you changed it in the systemd unit).
+# 3) sudo a2ensite latam-fx && sudo apache2ctl configtest && sudo systemctl reload apache2
+# 4) Add HTTPS once DNS points here:
+#      sudo certbot --apache -d latam-fx.com -d www.latam-fx.com
+#    Certbot creates the :443 vhost and auto-renew. Production Next.js needs no websockets.
+
+<VirtualHost *:80>
+    ServerName latam-fx.com
+    ServerAlias www.latam-fx.com
+
+    ProxyPreserveHost On
+    ProxyPass / http://127.0.0.1:3000/
+    ProxyPassReverse / http://127.0.0.1:3000/
+    RequestHeader set X-Forwarded-Proto "http"
+
+    ErrorLog ${APACHE_LOG_DIR}/latam-fx_error.log
+    CustomLog ${APACHE_LOG_DIR}/latam-fx_access.log combined
+</VirtualHost>
